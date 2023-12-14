@@ -14,6 +14,15 @@
     <link rel="icon" type="image/png" href="img/Logo.jpeg">
 </head>
 <body>
+    <div class="loader-wrapper">
+        <div class="newtons-cradle">
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            <div class="newtons-cradle__dot"></div>
+            </div>
+        <div class="loading-text">Carregando...</div>
+    </div>
     <header>
         <div class="container">
             <div class="logo"><span>ÁQUARIO</span></div>
@@ -87,6 +96,13 @@
         </div>
       </footer>
       
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelector('.loader-wrapper').style.display = 'none';
+            }, 2000);
+        });
+    </script>
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <script src="js/owl/jquery.min.js"></script>
