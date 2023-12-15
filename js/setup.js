@@ -1,7 +1,7 @@
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
-    nav:false,
+    nav:true,
     responsive:{
         0:{
             items:1
@@ -29,3 +29,26 @@ window.addEventListener("scroll", function() {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Atualiza a posição do scroll
 }, false);
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.querySelector('.loader-wrapper').style.display = 'none';
+    }, 2000);
+
+    const links = document.querySelectorAll('header nav a');
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const href = this.getAttribute('href');
+            const targetElement = document.querySelector(href);
+
+            if (targetElement) {
+                const topOffset = targetElement.offsetTop;
+                window.scrollTo({
+                    top: topOffset - 50,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
