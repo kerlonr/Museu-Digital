@@ -27,11 +27,10 @@
         <div class="container">
             <div class="logo"><span>ÁQUARIO</span></div>
             <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Projetos</a>
-                <a href="#">Conquistas</a>
-                <a href="#">Equipe</a>
-                <a href="#">Galeria</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#conquistas">Conquistas</a>
+                <a href="#galeria">Galeria</a>
             </nav>
         </div>
     </header>
@@ -39,14 +38,14 @@
     <main>
         <div class="filme-principal">
             <div class="container-titulo">
-                <h3 class="titulo">Museu Digital Aquario</h3>
+                <h3 class="titulo">Museu Digital Áquario</h3>
             </div>
             <div class="botoes">
                 <button role="button" class="botao" id="btn-assistir"><i class="fas fa-play"></i>SAIBA MAIS...</button>
             </div>
         </div>
     </main>
-
+    <section id="projetos">
     <div class="carrousel-filmes">
         <h3 class="subtitulo">PROJETOS</h3>
         <div class="owl-carousel owl-theme">
@@ -61,7 +60,9 @@
             <a><div class="item"><img class="box-filme" src="img/banners/pendente.png" alt="pendente"></div></a>
         </div>
     </div>
+    </section>
 
+    <section id="equipe">
     <div class="carrousel-filmes">
         <h3 class="subtitulo">EQUIPE</h3>
         <div class="owl-carousel owl-theme">
@@ -73,36 +74,69 @@
 
         </div>
     </div>
+    </section>
+
+    <section id="conquistas">
+        <h3 class="subtitulo">CONQUISTAS</h3>
+        <div class="conquistas-container">
+            <div class="conquista">
+                <img src="caminho/para/imagem1.png" alt="Conquista 1">
+                <p>Descrição da conquista 1</p>
+            </div>
+            <div class="conquista">
+                <img src="caminho/para/imagem2.png" alt="Conquista 2">
+                <p>Descrição da conquista 2</p>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container-footer">
-          <div class="footer-content">
-            <div class="footer-logo">
-              <img src="img/Logo.jpeg" alt="Logo">
+            <div class="footer-content">
+                <div class="footer-logo">
+                <img src="img/Logo.jpeg" alt="Logo">
+                </div>
+                <div class="footer-info">
+                <p>Endereço: Avenidade Imigrantes, 909 - Horizontina</p>
+                <p>Telefone: (55) 55 99121-9977</p>
+                <p>Email: museudigital@gmail.com</p>
+                </div>
+                <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="footer-info">
-              <p>Endereço: Avenidade Imigrantes, 909 - Horizontina</p>
-              <p>Telefone: (55) 55 99121-9977</p>
-              <p>Email: museudigital@gmail.com</p>
-            </div>
-            <div class="footer-social">
-              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
           <div class="footer-bottom">
             <p>&copy; 2023 Museu Digital. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
-      
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                document.querySelector('.loader-wrapper').style.display = 'none';
-            }, 2000);
-        });
-    </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                setTimeout(function() {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                }, 2000);
+    
+                const links = document.querySelectorAll('header nav a');
+                links.forEach(function(link) {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const href = this.getAttribute('href');
+                        const targetElement = document.querySelector(href);
+    
+                        if (targetElement) {
+                            const topOffset = targetElement.offsetTop;
+                            window.scrollTo({
+                                top: topOffset - 50,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <script src="js/owl/jquery.min.js"></script>

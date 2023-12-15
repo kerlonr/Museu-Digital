@@ -68,9 +68,10 @@ header nav a:hover {
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 .subtitulo {
-    margin: 20px 0 10px 3rem;
+    margin: 20px 0 10px 0;
     font-size: 40px;
     font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-align: center;
 }
 
 /* Estilos para os elementos de filme */
@@ -241,7 +242,7 @@ header nav a:hover {
 .newtons-cradle {
     --uib-size: 50px;
     --uib-speed: 1.2s;
-    --uib-color: #474554;
+    --uib-color: #ffffff;
     position: relative;
     display: flex;
     align-items: center;
@@ -309,4 +310,40 @@ header nav a:hover {
      animation-timing-function: ease-in;
     }
    }
+   #conquistas {
+    background-color: #141414;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.conquistas-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conquista {
+    margin: 20px;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 250px;
+}
+
+.conquista img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.conquista p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
    
