@@ -131,6 +131,26 @@ header nav a:hover {
     transform: scale(1.03);
     z-index: 2;
 }
+.owl-item.active:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+/* Estilos para os elementos de filme */
+.box-filme2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.box-filme2 img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
 
 /* Estilos dos botões */
 .botao {
@@ -407,7 +427,6 @@ header nav a:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    width: 250px;
 }
 
 .conquista img {
@@ -417,8 +436,45 @@ header nav a:hover {
 }
 
 .conquista p {
-    margin-top: 15px;
-    font-size: 16px;
     color: #333;
+}
+
+.medalha {
+    position: absolute;
+    top: 7px;
+    right: -96px;
+    padding: 13px 115px;
+    color: black;
+    font-weight: bold;
+    transform: rotate(30deg);
+}
+/* Estilos para a seção da equipe */
+.equipe-section {
+    text-align: center; /* Alinhamento central do texto */
+}
+
+.equipe-section .carrousel-filmes {
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+.equipe-section .subtitulo {
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+}
+
+.equipe-section .container {
+    display: flex; /* Mostra as imagens em linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    flex-wrap: wrap; /* Quebra as imagens para uma nova linha quando não couberem mais */
+}
+
+.equipe-section .container div {
+    margin: 10px; /* Espaçamento entre as imagens */
+}
+
+.equipe-section .container img {
+    max-width: 200px; /* Largura máxima para as imagens */
+    height: auto; /* Altura automática para manter a proporção */
+    display: block; /* Remove espaços indesejados */
 }
 
