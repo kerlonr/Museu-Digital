@@ -2,7 +2,7 @@
 const owlSettings = {
     loop: true,
     autoplay: false,
-    autoplayTimeout: 1000,
+    autoplayTimeout: 3000,
     autoplayHoverPause: false,
     margin: 10,
     nav: true,
@@ -12,6 +12,10 @@ const owlSettings = {
         1000: { items: 5 }
     }
 };
+
+document.getElementById("logo").addEventListener("click", function() {
+    window.location.href = "tv.html";
+});
 
 $('.owl-carousel').owlCarousel(owlSettings);
 
