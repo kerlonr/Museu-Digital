@@ -2,7 +2,7 @@
 const owlSettings = {
     loop: true,
     autoplay: true,
-    autoplayTimeout: 2000,
+    autoplayTimeout: 3000,
     autoplayHoverPause: false,
     margin: 10,
     nav: true,
