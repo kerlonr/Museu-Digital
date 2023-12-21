@@ -60,9 +60,17 @@ body {
 }
 
 /* Estilos do header */
-header .container {
+.header {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
     display: flex;
+    justify-content: center;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -72,15 +80,29 @@ header .container {
     text-decoration: none;
 }
 
-header nav a {
-    text-decoration: none;
-    color: #AAA;
-    margin-right: 20px;
+nav ul {
+    list-style-type: none;
 }
 
-header nav a:hover {
+nav ul li {
+    display: inline;
+    margin: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin: 0 20px 0 20px;
+}
+
+nav a:hover {
     color: #fff;
 }
+
 
 /* Estilos para o filme principal */
 .filme-principal {
@@ -105,6 +127,7 @@ header nav a:hover {
     font-size: 60px;
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
+
 .subtitulo {
     margin: 20px 0 10px 0;
     font-size: 40px;
@@ -132,11 +155,13 @@ header nav a:hover {
     transform: scale(1.03);
     z-index: 2;
 }
+
 .owl-item.active:hover {
     transform: scale(1.03);
     transition: transform 0.3s ease;
     z-index: 2;
 }
+
 /* Estilos para os elementos de filme */
 .box-filme2 {
     width: 100%;
@@ -196,16 +221,21 @@ header nav a:hover {
     justify-content: space-between;
     z-index: 10;
 }
+
 /* Ajustando o tamanho das setas do Owl Carousel */
 .owl-prev,
 .owl-next {
-    width: 50px; /* Ajuste a largura conforme desejado */
-    height: 50px; /* Ajuste a altura conforme desejado */
-    font-size: 24; /* Reseta o tamanho da fonte para zero (para remover o texto padrão) */
+    width: 50px;
+    /* Ajuste a largura conforme desejado */
+    height: 50px;
+    /* Ajuste a altura conforme desejado */
+    font-size: 24;
+    /* Reseta o tamanho da fonte para zero (para remover o texto padrão) */
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 100%;
-    padding: 10px; /* Ajuste o espaçamento interno conforme desejado */
+    padding: 10px;
+    /* Ajuste o espaçamento interno conforme desejado */
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
@@ -213,7 +243,8 @@ header nav a:hover {
 /* Ajuste o tamanho do ícone da seta */
 .owl-prev i,
 .owl-next i {
-    font-size: 36px; /* Ajuste o tamanho do ícone conforme desejado */
+    font-size: 36px;
+    /* Ajuste o tamanho do ícone conforme desejado */
 }
 
 .owl-prev:hover,
@@ -248,55 +279,58 @@ header nav a:hover {
     background-color: #333;
     color: #fff;
     padding: 40px 0;
-  }
-  
-  .container-footer {
+}
+
+.container-footer {
     width: 80%;
     margin: 0 auto;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
-  
-  .footer-logo img {
+}
+
+.footer-logo img {
     width: 150px;
     height: auto;
     border-radius: 50%;
-  }
-  
-  .footer-info {
+}
+
+.footer-info {
     margin-top: 20px;
-  }
-  
-  .footer-info p {
+}
+
+.footer-info p {
     margin-bottom: 8px;
-  }
-  
-  .footer-social {
+}
+
+.footer-social {
     color: #fff;
     font-size: 24px;
     margin-right: 10px;
     transition: color 0.3s ease;
-  }
-  .social-icon{
+}
+
+.social-icon {
     color: #fff;
     font-size: 24px;
     margin-right: 20px;
     transition: color 0.3s ease;
-  }
-  
-  .footer-social .social-icon:hover {
-    color: rgb(102, 191, 218); /* Cor desejada ao passar o mouse */
-  }
-  
-  .footer-bottom {
+}
+
+.footer-social .social-icon:hover {
+    color: rgb(102, 191, 218);
+    /* Cor desejada ao passar o mouse */
+}
+
+.footer-bottom {
     text-align: center;
     margin-top: 20px;
-  }
+}
+
 /* Estilos para a tela de loading */
 .loader-wrapper {
     position: fixed;
@@ -332,9 +366,15 @@ header nav a:hover {
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
 .newtons-cradle {
     --uib-size: 50px;
     --uib-speed: 1.2s;
@@ -406,6 +446,7 @@ header nav a:hover {
         animation-timing-function: ease-in;
     }
 }
+
 /* Estilos para a seção de conquistas */
 #conquistas {
     background-color: #141414;
@@ -431,7 +472,6 @@ header nav a:hover {
 }
 
 .conquista img {
-    max-width: 100%;
     height: auto;
     border-radius: 25px;
 }
@@ -441,41 +481,50 @@ header nav a:hover {
 }
 
 .medalha {
+    top: 2%;
+    right: 2%;
     position: absolute;
-    top: 7px;
-    right: -96px;
-    padding: 13px 115px;
-    color: black;
-    font-weight: bold;
-    transform: rotate(30deg);
+    width: 20%;
+    transform: rotate(22deg);
 }
+
 /* Estilos para a seção da equipe */
 .equipe-section {
-    text-align: center; /* Alinhamento central do texto */
+    text-align: center;
+    /* Alinhamento central do texto */
 }
 
 .equipe-section .carrousel-filmes {
-    max-width: 1200px; /* Largura máxima para o conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    max-width: 1200px;
+    /* Largura máxima para o conteúdo */
+    margin: 0 auto;
+    /* Centraliza o conteúdo horizontalmente */
 }
 
 .equipe-section .subtitulo {
-    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    margin-bottom: 30px;
+    /* Espaçamento abaixo do título */
 }
 
 .equipe-section .container {
-    display: flex; /* Mostra as imagens em linha */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    flex-wrap: wrap; /* Quebra as imagens para uma nova linha quando não couberem mais */
+    display: flex;
+    /* Mostra as imagens em linha */
+    justify-content: center;
+    /* Centraliza as imagens horizontalmente */
+    flex-wrap: wrap;
+    /* Quebra as imagens para uma nova linha quando não couberem mais */
 }
 
 .equipe-section .container div {
-    margin: 10px; /* Espaçamento entre as imagens */
+    margin: 10px;
+    /* Espaçamento entre as imagens */
 }
 
 .equipe-section .container img {
-    max-width: 200px; /* Largura máxima para as imagens */
-    height: auto; /* Altura automática para manter a proporção */
-    display: block; /* Remove espaços indesejados */
+    max-width: 200px;
+    /* Largura máxima para as imagens */
+    height: auto;
+    /* Altura automática para manter a proporção */
+    display: block;
+    /* Remove espaços indesejados */
 }
-
