@@ -123,6 +123,7 @@ nav a:hover {
 
 .filme-principal .titulo {
     margin-top: 10%;
+    margin-left: 20px;
     margin-bottom: 20%;
     font-size: 60px;
     font-family: 'Trebuchet MS', Arial, sans-serif;
@@ -226,16 +227,12 @@ nav a:hover {
 .owl-prev,
 .owl-next {
     width: 50px;
-    /* Ajuste a largura conforme desejado */
     height: 50px;
-    /* Ajuste a altura conforme desejado */
     font-size: 24;
-    /* Reseta o tamanho da fonte para zero (para remover o texto padrão) */
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 100%;
     padding: 10px;
-    /* Ajuste o espaçamento interno conforme desejado */
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
@@ -244,19 +241,11 @@ nav a:hover {
 .owl-prev i,
 .owl-next i {
     font-size: 36px;
-    /* Ajuste o tamanho do ícone conforme desejado */
 }
 
 .owl-prev:hover,
 .owl-next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-
-/* Estilos para o container */
-.container-titulo {
-    margin-left: 50px;
 }
 
 .filme-principal .container {
@@ -448,6 +437,15 @@ nav a:hover {
 }
 
 /* Estilos para a seção de conquistas */
+#eventoDataCanvas {
+    background-color: #f5f5f5;
+    border-radius: 20%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+}
+
 #conquistas {
     background-color: #141414;
     padding: 50px 0;
@@ -491,40 +489,29 @@ nav a:hover {
 /* Estilos para a seção da equipe */
 .equipe-section {
     text-align: center;
-    /* Alinhamento central do texto */
 }
 
 .equipe-section .carrousel-filmes {
     max-width: 1200px;
-    /* Largura máxima para o conteúdo */
     margin: 0 auto;
-    /* Centraliza o conteúdo horizontalmente */
 }
 
 .equipe-section .subtitulo {
     margin-bottom: 30px;
-    /* Espaçamento abaixo do título */
 }
 
 .equipe-section .container {
     display: flex;
-    /* Mostra as imagens em linha */
     justify-content: center;
-    /* Centraliza as imagens horizontalmente */
     flex-wrap: wrap;
-    /* Quebra as imagens para uma nova linha quando não couberem mais */
 }
 
 .equipe-section .container div {
     margin: 10px;
-    /* Espaçamento entre as imagens */
 }
 
 .equipe-section .container img {
     max-width: 200px;
-    /* Largura máxima para as imagens */
     height: auto;
-    /* Altura automática para manter a proporção */
     display: block;
-    /* Remove espaços indesejados */
 }
