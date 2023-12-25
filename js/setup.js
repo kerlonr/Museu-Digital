@@ -17,6 +17,8 @@ document.getElementById("logo").addEventListener("click", function() {
     window.location.href = "tv.html";
 });
 
+
+
 $('.owl-carousel').owlCarousel(owlSettings);
 
 // Esconder/mostrar o header ao rolar a página
@@ -73,3 +75,7 @@ const equipeSection = document.querySelector('.equipe-section .owl-carousel');
 if (equipeSection) {
     equipeSection.classList.remove('owl-carousel');
 }
+
+document.getElementById("logo2").addEventListener("click", function() {
+    window.location.href = "logo.html";
+});
