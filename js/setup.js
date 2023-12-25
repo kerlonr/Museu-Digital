@@ -73,10 +73,3 @@ const equipeSection = document.querySelector('.equipe-section .owl-carousel');
 if (equipeSection) {
     equipeSection.classList.remove('owl-carousel');
 }
-
-// Inicializar o Owl Carousel para os outros elementos com a classe .owl-carousel
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    autoplay: false,
-    // ... Outras configurações do Owl Carousel ...
-});

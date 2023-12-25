@@ -277,9 +277,14 @@ nav a:hover {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+@media screen and (orientation: landscape) {
+    .footer-content {
+        justify-content: space-between;
+    }
 }
 
 .footer-logo img {
@@ -299,14 +304,17 @@ nav a:hover {
 .footer-social {
     color: #fff;
     font-size: 24px;
-    margin-right: 10px;
     transition: color 0.3s ease;
 }
-
 .social-icon {
     color: #fff;
     font-size: 24px;
     margin-right: 20px;
+    transition: color 0.3s ease;
+}
+.social-icon2 {
+    color: #fff;
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 

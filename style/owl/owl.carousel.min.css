@@ -108,7 +108,8 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none
+    user-select: none;
+    text-align: center;
 }
 
 .owl-carousel.owl-grab {
