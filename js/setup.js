@@ -1,4 +1,5 @@
-// Configuração do Owl Carousel
+// CONFIGURACOES CARROSSEL
+
 const owlSettings = {
     loop: true,
     autoplay: false,
@@ -13,38 +14,18 @@ const owlSettings = {
     }
 };
 
-document.getElementById("logo").addEventListener("click", function() {
-    window.location.href = "tv.html";
-});
-
-
-
 $('.owl-carousel').owlCarousel(owlSettings);
 
-// Esconder/mostrar o header ao rolar a página
-let lastScrollTop = 0;
+// CONFIGURACOES TELA DE LOADING
 
-window.addEventListener("scroll", function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    const header = document.querySelector("header");
-
-    if (currentScroll > lastScrollTop) {
-        header.style.top = "-100px"; // Esconde o header ao rolar para baixo
-    } else {
-        header.style.top = "0"; // Mostra o header ao rolar para cima
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Atualiza a posição do scroll
-}, false);
-
-// Ocultar a tela de loading após um intervalo de tempo
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         document.querySelector('.loader-wrapper').style.display = 'none';
     }, 2000);
 });
 
-// Função para rolar suavemente para a âncora clicada
+// CONFIGURACOES NAV BAR
+
 function scrollToTarget(event) {
     event.preventDefault();
     const href = this.getAttribute('href');
@@ -59,23 +40,13 @@ function scrollToTarget(event) {
     }
 }
 
-// Event listeners para links no header
-const headerLinks = document.querySelectorAll('header nav a');
-headerLinks.forEach(function(link) {
-    link.addEventListener('click', scrollToTarget);
-});
-
-// Event listener para links de eventos no header
 const eventosLinks = document.querySelectorAll('header nav a[href="#eventos"]');
 eventosLinks.forEach(function(link) {
     link.addEventListener('click', scrollToTarget);
 });
-// Desativar o carrossel na seção da equipe
-const equipeSection = document.querySelector('.equipe-section .owl-carousel');
-if (equipeSection) {
-    equipeSection.classList.remove('owl-carousel');
-}
 
-document.getElementById("logo2").addEventListener("click", function() {
-    window.location.href = "logo.html";
+// REDIRECIONAMENTO DE HTML'S
+
+document.getElementById("logo").addEventListener("click", function() {
+    window.location.href = "tv.html";
 });
