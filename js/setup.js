@@ -32,18 +32,19 @@ function scrollToTarget(event) {
     const targetElement = document.querySelector(href);
 
     if (targetElement) {
-        const topOffset = targetElement.offsetTop;
+        const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({
-            top: topOffset - 50,
+            top: offsetTop,
             behavior: 'smooth'
         });
     }
 }
 
-const eventosLinks = document.querySelectorAll('header nav a[href="#eventos"]');
-eventosLinks.forEach(function(link) {
+const links = document.querySelectorAll('header nav a[href^="#"]');
+links.forEach(function(link) {
     link.addEventListener('click', scrollToTarget);
 });
+
 
 // REDIRECIONAMENTO DE HTML'S
 

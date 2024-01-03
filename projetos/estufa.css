@@ -1,0 +1,446 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Variáveis */
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb: rgba(0, 0, 0, 0.3);
+    --scrollbar-hover: rgba(0, 0, 0, 0.5);
+}
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para a scrollbar */
+/* Para navegadores Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-hover);
+}
+
+/* Para navegadores Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+html::-moz-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+html::-moz-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-hover);
+}
+
+/* Corpo */
+body {
+    background: var(--preta);
+    font-family: 'Montserrat', sans-serif;
+    color: #f4f4f4;
+}
+
+.texto {
+    padding: 10px;
+    margin: 0px 20px ;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: #141414;
+    font-size: larger;
+}
+.container-sobre {
+    margin: 0px 15%;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row-reverse;
+}
+/* Estilos para a aba */
+.tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        /* Estilos para o botão da aba */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-radius: 5px 5px 0 0;
+        }
+
+        /* Estilos para o conteúdo da aba */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+            overflow-y: scroll;
+            height: 300px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Estilos para a exibição de código */
+        pre {
+            margin: 0;
+            padding: 0;
+            counter-reset: linenumbers;
+        }
+
+        pre code {
+            counter-increment: linenumbers;
+        }
+
+        pre code:before {
+            content: counter(linenumbers);
+            display: inline-block;
+            width: 30px; /* Ajuste conforme necessário para a quantidade de dígitos */
+            margin-right: 10px;
+            color: #888;
+            text-align: right;
+        }  
+.imagem-sobre {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+/* Estilos do header */
+.header {
+    background-color: #333;
+    color: #fff;
+}
+.code-container {
+    background-color: #2a2734;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+pre > code {
+    color: #f8f8f2;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 40px;
+    padding: 10px;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin: 0 20px 0 20px;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+
+/* Estilos para o filme principal */
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50) 100%), url('../img/fundo-estufa.png');
+    height: 550px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .titulo-descricao,
+.filme-principal .descricao {
+    margin: 20px 0 30px 0;
+}
+
+.filme-principal .titulo {
+    margin-top: 10%;
+    margin-left: 20px;
+    margin-bottom: 20%;
+    font-size: 60px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.subtitulo {
+    margin: 20px 0 10px 0;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estilos para os elementos de filme */
+.equipe {
+    width: 200px; /* Defina a largura desejada para as imagens */
+    height: 200px; /* Defina a altura desejada para as imagens */
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    display: flex; /* Adiciona flex para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.equipe img {
+    max-width: 100%; /* Adiciona para garantir a responsividade */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease;
+}
+
+.equipe:hover {
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+/* O resto do seu CSS permanece inalterado */
+
+
+.filme-principal .container {
+    width: 70%;
+}
+
+/* Estilos para o carrossel de filmes */
+.carrousel-filmes {
+    margin-top: 5px;
+}
+
+.carrousel-filmes .titulo {
+    margin: 20px 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* Estilos do footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.container-footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media screen and (orientation: landscape) {
+    .footer-content {
+        justify-content: space-between;
+    }
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.footer-info {
+    margin-top: 20px;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+}
+
+.footer-social {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+.social-icon {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+.social-icon2 {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: rgb(102, 191, 218);
+    /* Cor desejada ao passar o mouse */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para a tela de loading */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-text {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Estilos para a tela de loading - Animação */
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-text {
+    margin-top: 15px;
+    font-size: 18px;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.newtons-cradle {
+    --uib-size: 50px;
+    --uib-speed: 1.2s;
+    --uib-color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--uib-size);
+    height: var(--uib-size);
+}
+
+.newtons-cradle__dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    transform-origin: center top;
+}
+
+.newtons-cradle__dot::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+}
+
+.newtons-cradle__dot:first-child {
+    animation: swing var(--uib-speed) linear infinite;
+}
+
+.newtons-cradle__dot:last-child {
+    animation: swing2 var(--uib-speed) linear infinite;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+
+    25% {
+        transform: rotate(70deg);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes swing2 {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: rotate(-70deg);
+        animation-timing-function: ease-in;
+    }
+}
