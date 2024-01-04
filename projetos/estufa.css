@@ -61,101 +61,63 @@ body {
 
 .texto {
     padding: 10px;
-    margin: 0px 20px ;
-    background-color: #f4f4f4;
+    margin: 0px 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    color: #141414;
-    font-size: larger;
+    color: #f3f3f3;
+    font-size: 25px;
+    font-weight:lighter;
 }
-.container-sobre {
-    margin: 0px 15%;
+
+.container1{
+    margin: 5% 15%;
     display: flex;
-    align-items: center;
-    background-color: #f4f4f4;
-    border-radius: 10px;
+    background-color: rgb(138, 197, 98);
+    border-radius: 3rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     flex-direction: row-reverse;
+    align-items: center;
 }
-/* Estilos para a aba */
-.tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-            border-radius: 5px;
-        }
-
-        /* Estilos para o botão da aba */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 10px 20px;
-            transition: 0.3s;
-            border-radius: 5px 5px 0 0;
-        }
-
-        /* Estilos para o conteúdo da aba */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border-top: none;
-            overflow-y: scroll;
-            height: 300px;
-            position: relative;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        /* Estilos para a exibição de código */
-        pre {
-            margin: 0;
-            padding: 0;
-            counter-reset: linenumbers;
-        }
-
-        pre code {
-            counter-increment: linenumbers;
-        }
-
-        pre code:before {
-            content: counter(linenumbers);
-            display: inline-block;
-            width: 30px; /* Ajuste conforme necessário para a quantidade de dígitos */
-            margin-right: 10px;
-            color: #888;
-            text-align: right;
-        }  
-.imagem-sobre {
-    border-radius: 10px;
+.container2 {
+    margin: 5% 15%;
+    display: flex;
+    background-color: rgb(138, 197, 98);
+    border-radius: 3rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    align-items: center;
 }
+
+
+.imagem-sobre {
+    border-radius: 3rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    max-width: 400px;
+}
+
 /* Estilos do header */
 .header {
     background-color: #333;
     color: #fff;
 }
-.code-container {
-    background-color: #2a2734;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    overflow-x: auto;
-}
-
-pre > code {
-    color: #f8f8f2;
-}
-
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.slogan {
+    font-size: 24px;
+    color: #ffffff;
+    padding: 20px;
+    margin: 1%;
+    border-radius: 8px;
+    background-color: rgba(52, 172, 52, 0.5);
+    opacity: 90%;
+    max-width: 100%;
 }
 
 .logo {
@@ -215,29 +177,42 @@ nav a:hover {
 }
 
 .subtitulo {
-    margin: 20px 0 10px 0;
-    font-size: 40px;
+    margin: 20px 0 20px 0;
+    font-size: 50px;
     font-family: 'Trebuchet MS', Arial, sans-serif;
     text-align: center;
+    font-weight: bolder;
+    text-decoration: dotted;
+}
+.conteudo {
+    text-align: left;
+    margin-right: 10px;
 }
 
 /* Estilos para os elementos de filme */
 .equipe {
-    width: 200px; /* Defina a largura desejada para as imagens */
-    height: 200px; /* Defina a altura desejada para as imagens */
+    width: 200px;
+    /* Defina a largura desejada para as imagens */
+    height: 200px;
+    /* Defina a altura desejada para as imagens */
     overflow: hidden;
     position: relative;
     border-radius: 25px;
     padding: 15px;
     transition: transform 0.3s ease;
-    display: flex; /* Adiciona flex para centralizar */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    /* Adiciona flex para centralizar */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
 }
 
 .equipe img {
-    max-width: 100%; /* Adiciona para garantir a responsividade */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%;
+    /* Adiciona para garantir a responsividade */
+    height: auto;
+    /* Mantém a proporção da imagem */
     transition: transform 0.3s ease;
 }
 
@@ -266,7 +241,7 @@ nav a:hover {
 
 /* Estilos do footer */
 .footer {
-    background-color: #333;
+    background-color: rgba(70, 153, 50, 0.596);
     color: #fff;
     padding: 40px 0;
 }
@@ -282,6 +257,7 @@ nav a:hover {
     align-items: center;
     flex-wrap: wrap;
 }
+
 @media screen and (orientation: landscape) {
     .footer-content {
         justify-content: space-between;
@@ -307,12 +283,14 @@ nav a:hover {
     font-size: 24px;
     transition: color 0.3s ease;
 }
+
 .social-icon {
     color: #fff;
     font-size: 24px;
     margin-right: 20px;
     transition: color 0.3s ease;
 }
+
 .social-icon2 {
     color: #fff;
     font-size: 24px;
