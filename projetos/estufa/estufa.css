@@ -1,0 +1,321 @@
+/* Importação de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* Variáveis */
+:root {
+  --vermelho: #e50914;
+  --preta: #141414;
+  --verde-clarinho: #8ac562;
+  --verde-claro: #629d3d;
+  --verde: #3b7616;
+  --verde-medio: #105100;
+  --verde-forte: #002f00;
+  --cinza: #333;
+  --branco: #f3f3f3;
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb: rgba(0, 0, 0, 0.3);
+  --scrollbar-hover: rgba(0, 0, 0, 0.5);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para a scrollbar */
+/* Para navegadores Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb,
+html::-moz-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover,
+html::-moz-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+}
+
+/* Estilos do BODY */
+body {
+  background: var(--preta);
+  font-family: "Montserrat", sans-serif;
+  color: var(--branco);
+}
+
+/* Estilos do HEADER */
+.header {
+  background-color: var(--cinza);
+  color: var(--branco);
+}
+
+.logo {
+  font-size: 40px;
+  padding: 10px;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+/* Estilos da NAVBAR*/
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin: 0 20px 0 20px;
+}
+
+nav a:hover {
+  color: var(--branco);
+}
+
+/* Estilos do CONTEÚDO */
+.slogan {
+  font-size: 24px;
+  color: var(--branco);
+  padding: 20px;
+  margin: 1%;
+  border-radius: 8px;
+  background-color: var(--verde-forte);
+  opacity: 90%;
+  max-width: 100%;
+}
+
+.texto {
+  padding: 10px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container1,
+.container2 {
+  margin: 5% 15%;
+  display: flex;
+  background-color: var(--verde);
+  border-radius: 3rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+  align-items: center;
+}
+
+.container1 {
+  flex-direction: row-reverse;
+}
+
+.imagem-sobre {
+  border-radius: 3rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  max-width: 400px;
+}
+
+/* Estilos para o BANNER */
+.banner {
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("../../img/fundo-estufa.png");
+  height: 550px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.titulo {
+  margin-top: 10%;
+  margin-left: 20px;
+  margin-bottom: 20%;
+  font-size: 60px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.subtitulo {
+  margin: 20px 0 20px 0;
+  font-size: 50px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: dotted;
+}
+
+.conteudo {
+  text-align: left;
+  margin-right: 10px;
+}
+
+.imagem-grande {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bp {
+  background-color: var(--verde-clarinho);
+  display: flex;
+  align-items: center;
+}
+
+h4 {
+  display: flex;
+}
+
+/* Estilos dos elementos de equipe */
+.equipe {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipe img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.equipe:hover {
+  transform: scale(1.03);
+  z-index: 2;
+}
+
+/* Estilos para o card */
+.conteudo-card {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2% 5% 5% 5%;
+}
+
+.card {
+  display: block;
+  width: 15%;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  background-color: var(--verde-clarinho);
+}
+
+.card img {
+  width: 70%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  padding-top: 5px ;
+  margin-bottom: 10px;
+  color: var(--cinza);
+  text-align: center;
+}
+
+/* Estilos do FOOTER */
+.footer {
+  background-color: var(--cinza);
+  color: var(--branco);
+  padding: 40px 0;
+}
+
+.container-footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (orientation: landscape) {
+  .footer-content {
+    justify-content: space-between;
+  }
+}
+
+.footer-logo img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.footer-info {
+  margin-top: 20px;
+}
+
+.footer-info p {
+  margin-bottom: 8px;
+}
+
+/* Estilos dos ICONS */
+.footer-social,
+[class*="social-icon"],
+.social-icon2 {
+  color: var(--branco);
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+[class*="social-icon"] {
+  margin-right: 20px;
+}
+
+.social-icon:hover {
+  color: #3b5998;
+}
+
+.social-icon1:hover {
+  color: #66bfda;
+}
+
+.social-icon2:hover {
+  color: #dd2a7b;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
