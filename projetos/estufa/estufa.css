@@ -226,6 +226,38 @@ h4 {
   text-align: center;
 }
 
+/* ---- Estilos dos DOWNLOADS ---- */
+.container-downloads {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: center;
+}
+.btn-download {
+  background-color: var(--verde-claro);
+  border-radius: 2rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 1%;
+  border: var(--verde-claro);
+  border-style: solid;
+}
+.btn-download:hover {
+  background-color: var(--branco);
+  transform: scale(1.1);
+  transition: 1s ease-in-out;
+}
+
+.material-symbols-outlined {
+  color: var(--preta);
+}
+
+.btn-download a {
+  text-decoration: none;
+}
+
 /* ---- Estilos do FOOTER ---- */
 .footer {
   background-color: var(--cinza);
