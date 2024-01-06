@@ -3,22 +3,29 @@
 
 /* Variáveis */
 :root {
+    --branco: #ffffff;
+    --cinza: #333333;
+    --cinza-fraco: #AAAAAA;
     --vermelho: #E50914;
-    --preta: #141414;
+    --preto: #141414;
     --scrollbar-bg: transparent;
     --scrollbar-thumb: rgba(0, 0, 0, 0.3);
     --scrollbar-hover: rgba(0, 0, 0, 0.5);
+    --loading-speed: 1.2s;
+    --cor-facebook: #3b5998;
+    --cor-twitter: #66bfda;
+    --cor-instagram: #dd2a7b;
 }
 
-/* Reset e estilos gerais */
+/* ---- RESET ---- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos para a scrollbar */
-/* Para navegadores Webkit (Chrome, Safari) */
+/* ---- Estilos da SCROLLBAR ---- */
+/* ---- Para navegadores Webkit ---- */
 ::-webkit-scrollbar {
     width: 10px;
     background-color: var(--scrollbar-bg);
@@ -35,7 +42,7 @@
     background-color: var(--scrollbar-hover);
 }
 
-/* Para navegadores Firefox */
+/* ---- Estilos pro Firefox ---- */
 html {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -52,25 +59,17 @@ html::-moz-scrollbar-thumb:hover {
     background-color: var(--scrollbar-hover);
 }
 
-/* Corpo */
+/* ---- Estilos do BODY ---- */
 body {
-    background: var(--preta);
+    background: var(--preto);
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: var(--branco);
 }
 
-/* Estilos do header */
+/* ---- Estilos do HEADER ----*/
 .header {
-    background-color: #333;
-    color: #fff;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: var(--cinza);
+    color: var(--branco);
 }
 
 .logo {
@@ -80,6 +79,7 @@ body {
     text-decoration: none;
 }
 
+/* ---- Estilos NAVBAR ---- */
 nav ul {
     list-style-type: none;
 }
@@ -95,16 +95,23 @@ nav ul li:last-child {
 
 nav a {
     text-decoration: none;
-    color: #AAA;
+    color: var(--cinza-fraco);
     margin: 0 20px 0 20px;
 }
 
 nav a:hover {
-    color: #fff;
+    color: var(--branco);
 }
 
+/* ---- Estilos PRINCIPAIS ---- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-/* Estilos para o filme principal */
 .filme-principal {
     font-size: 16px;
     background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50) 100%), url('img/6195005.jpg');
@@ -129,6 +136,11 @@ nav a:hover {
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
+.filme-principal .container {
+    width: 70%;
+}
+
+/* ---- Estilo Subtitulo ---- */
 .subtitulo {
     margin: 20px 0 10px 0;
     font-size: 40px;
@@ -136,18 +148,20 @@ nav a:hover {
     text-align: center;
 }
 
-/* Estilos para os elementos de filme */
-.box-filme {
+/* ---- Estilos do box dos filmes ---- */
+.box-filme,
+.box-filme2 {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
-    border-radius: 25px;
+    border-radius: 2rem;
     padding: 15px;
     transition: transform 0.3s ease;
 }
 
-.box-filme img {
+.box-filme img,
+.box-filme2 img {
     width: 100%;
     transition: transform 0.3s ease;
 }
@@ -157,62 +171,7 @@ nav a:hover {
     z-index: 2;
 }
 
-.owl-item.active:hover {
-    transform: scale(1.03);
-    transition: transform 0.3s ease;
-    z-index: 2;
-}
-
-/* Estilos para os elementos de filme */
-.box-filme2 {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    border-radius: 25px;
-    padding: 15px;
-    transition: transform 0.3s ease;
-}
-
-.box-filme2 img {
-    width: 100%;
-    transition: transform 0.3s ease;
-}
-
-/* Estilos dos botões */
-.botao {
-    background-color: gray;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 15px 30px;
-    margin-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    cursor: pointer;
-    transition: .3s ease all;
-}
-
-.botao:hover {
-    background-color: rgba(0, 0, 0, .50);
-    color: white;
-}
-
-.botao i {
-    margin-right: 8px;
-}
-
-#btn-assistir {
-    background-color: white;
-    color: black;
-}
-
-#btn-assistir:hover {
-    background-color: gray;
-    color: white;
-}
-
-/* Estilizando as setas do Owl Carousel */
+/* ---- Estilos do OWL ---- */
 .owl-nav {
     position: absolute;
     top: 50%;
@@ -223,13 +182,21 @@ nav a:hover {
     z-index: 10;
 }
 
-/* Ajustando o tamanho das setas do Owl Carousel */
+.owl-item.active:hover {
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+.owl-item.active:hover {
+    transition: transform 0.3s ease;
+}
+
 .owl-prev,
 .owl-next {
     width: 50px;
     height: 50px;
     font-size: 24;
-    color: #ffffff;
+    color: var(--branco);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 100%;
     padding: 10px;
@@ -237,22 +204,17 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* Ajuste o tamanho do ícone da seta */
-.owl-prev i,
-.owl-next i {
-    font-size: 36px;
-}
-
 .owl-prev:hover,
 .owl-next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.filme-principal .container {
-    width: 70%;
+.owl-prev i,
+.owl-next i {
+    font-size: 36px;
 }
 
-/* Estilos para o carrossel de filmes */
+/* ---- Estilos para o CARROSSEL ---- */
 .carrousel-filmes {
     margin-top: 5px;
 }
@@ -263,79 +225,14 @@ nav a:hover {
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
-/* Estilos do footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 0;
-}
-
-.container-footer {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-@media screen and (orientation: landscape) {
-    .footer-content {
-        justify-content: space-between;
-    }
-}
-
-.footer-logo img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.footer-info {
-    margin-top: 20px;
-}
-
-.footer-info p {
-    margin-bottom: 8px;
-}
-
-.footer-social {
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s ease;
-}
-.social-icon {
-    color: #fff;
-    font-size: 24px;
-    margin-right: 20px;
-    transition: color 0.3s ease;
-}
-.social-icon2 {
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s ease;
-}
-
-.footer-social .social-icon:hover {
-    color: rgb(102, 191, 218);
-    /* Cor desejada ao passar o mouse */
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Estilos para a tela de loading */
+/* ---- Estilos para a TELA DE LOADING ---- */
 .loader-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #212121;
+    background-color: var(--preto);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,13 +240,12 @@ nav a:hover {
 }
 
 .loading-text {
-    color: #ffffff;
+    color: var(--branco);
     text-align: center;
     margin-top: 10px;
     font-size: 18px;
 }
 
-/* Estilos para a tela de loading - Animação */
 .loader-wrapper {
     display: flex;
     flex-direction: column;
@@ -362,6 +258,7 @@ nav a:hover {
     animation: fadeIn 1s ease-in-out infinite alternate;
 }
 
+/* ---- Animação da TELA DE LOADING ----*/
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -373,15 +270,12 @@ nav a:hover {
 }
 
 .newtons-cradle {
-    --uib-size: 50px;
-    --uib-speed: 1.2s;
-    --uib-color: #ffffff;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--uib-size);
-    height: var(--uib-size);
+    width: 50px;
+    height: 50px;
 }
 
 .newtons-cradle__dot {
@@ -399,15 +293,15 @@ nav a:hover {
     width: 100%;
     height: 25%;
     border-radius: 50%;
-    background-color: var(--uib-color);
+    background-color: var(--branco);
 }
 
 .newtons-cradle__dot:first-child {
-    animation: swing var(--uib-speed) linear infinite;
+    animation: swing var(--loading-speed) linear infinite;
 }
 
 .newtons-cradle__dot:last-child {
-    animation: swing2 var(--uib-speed) linear infinite;
+    animation: swing2 var(--loading-speed) linear infinite;
 }
 
 @keyframes swing {
@@ -444,46 +338,29 @@ nav a:hover {
     }
 }
 
-/* Estilos para a seção de conquistas */
-#eventoDataCanvas {
-    background-color: #f5f5f5;
-    border-radius: 20%;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-
-}
-
-#conquistas {
-    background-color: #141414;
+/* ---- Estilos dos EVENTOS ---- */
+#eventos {
+    background-color: var(--preto);
     padding: 50px 0;
     text-align: center;
-}
-
-.conquistas-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .conquista {
     margin: 20px;
     padding-bottom: 20px;
-    background-color: gray;
-    border-radius: 8px;
+    background-color: var(--cinza-fraco);
+    border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .conquista img {
     height: auto;
-    border-radius: 25px;
+    border-radius: 2rem;
 }
 
 .conquista p {
-    color: #333;
+    color: var(--cinza);
 }
 
 .medalha {
@@ -494,7 +371,7 @@ nav a:hover {
     transform: rotate(22deg);
 }
 
-/* Estilos para a seção da equipe */
+/* ---- Estilos da EQUIPE ---- */
 .equipe-section {
     text-align: center;
 }
@@ -522,4 +399,68 @@ nav a:hover {
     max-width: 200px;
     height: auto;
     display: block;
+}
+
+/* ---- Estilos do FOOTER ---- */
+.footer {
+    background-color: var(--cinza);
+    color: var(--branco);
+    padding: 40px 0;
+}
+
+.container-footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (orientation: landscape) {
+    .footer-content {
+        justify-content: space-between;
+    }
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+}
+
+/* ---- Estilos dos ICONS ---- */
+[class*="social-icon"],
+.footer-social {
+    font-size: 24px;
+    transition: color 0.3s ease;
+    color: var(--branco);
+}
+
+[class*="social-icon"] {
+    margin-right: 20px;
+}
+
+.social-icon:hover {
+    color: var(--cor-facebook);
+}
+
+.social-icon1:hover {
+    color: var(--cor-twitter);
+}
+
+.social-icon2:hover {
+    color: var(--cor-instagram);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
 }
