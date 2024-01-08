@@ -5,9 +5,9 @@
 :root {
   --vermelho: #e50914;
   --preta: #141414;
-  --verde-clarinho: #8ac562;
+  --verde-clarinho: #71BE42;
   --verde-claro: #629d3d;
-  --verde: #3b7616;
+  --verde: #427D1E;
   --verde-medio: #105100;
   --verde-forte: #002f00;
   --cinza: #333;
@@ -98,7 +98,7 @@ nav a:hover {
   padding: 23px;
   margin: 1%;
   border-radius: 8px;
-  background-color: var(--verde-forte);
+  background-color: var(--verde);
   max-width: 100%;
   position: relative;
   top: -50px;
@@ -125,8 +125,8 @@ nav a:hover {
 .container2 {
   margin: 0 15% 5% 15%;
   display: flex;
-  background-color: var(--verde);
-  border-radius: 3rem;
+  background-color: var(--verde-claro);
+  border-radius: 4rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   flex-direction: row;
   align-items: center;
@@ -146,8 +146,7 @@ nav a:hover {
 /* Estilos para o BANNER */
 .banner {
   font-size: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../img/fundo-estufa.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../estufa/fundo-estufa.png");
   height: 550px;
   background-size: cover;
   display: flex;
@@ -159,6 +158,7 @@ nav a:hover {
 .titulo {
   margin: 10% 0 20% 20px;
   font: 60px "Trebuchet MS", Arial, sans-serif;
+  font-weight: bolder;
 }
 
 .subtitulo {
@@ -189,6 +189,24 @@ nav a:hover {
 h4 {
   display: flex;
 }
+/* ---- Estilos dos DESEMPENHOS ---- */
+.container-desempenho {
+  display: flex;
+  color: var(--branco);
+}
+
+.conteudo-desempenho {
+  display: flex;
+}
+
+.itens-desempenho {
+  display: flex;
+}
+
+.texto-desempenho {
+  color: var(--preta);
+  display: flex;
+}
 
 /* ---- Estilos do CARD EQUIPE ---- */
 .conteudo-card {
@@ -204,7 +222,7 @@ h4 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
   padding: 30px;
   text-align: center;
-  background-color: var(--verde-clarinho);
+  background-color: var(--verde);
 }
 
 .card img {
@@ -215,25 +233,62 @@ h4 {
 
 .card h2 {
   margin-bottom: 5px;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
 }
 
 .card p {
   font-size: 1rem;
   padding-top: 5px;
   margin-bottom: 10px;
-  color: var(--cinza);
+  color: var(--branco);
   text-align: center;
 }
 
 /* ---- Estilos dos DOWNLOADS ---- */
 .container-downloads {
-  background-color: var(--branco);
+  background-color: var(--verde-claro);
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
+
+.container-downloads2 {
+  background-color: var(--preta);
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.conteudo-download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto2 {
+  padding: 10px;
+  margin: 0px 225px;
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.subtitulo2 {
+  margin: 20px;
+  font: bold 40px "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  text-decoration: dotted;
+  color: var(--branco);
+}
+
+.imagem {
+  width: 30%;
+}
+
 .btn-download {
-  background-color: var(--verde-claro);
+  background-color: var(--branco);
   border-radius: 2rem;
   width: 10rem;
   display: flex;
@@ -241,13 +296,12 @@ h4 {
   justify-content: space-evenly;
   padding: 10px;
   margin: 1%;
-  border: var(--verde-claro);
   border-style: solid;
 }
 .btn-download:hover {
   background-color: var(--branco);
   transform: scale(1.1);
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .material-symbols-outlined {
@@ -256,6 +310,7 @@ h4 {
 
 .btn-download a {
   text-decoration: none;
+  color: var(--preta);
 }
 
 /* ---- Estilos do FOOTER ---- */
