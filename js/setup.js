@@ -49,5 +49,5 @@ links.forEach(function(link) {
 // REDIRECIONAMENTO DE HTML'S
 
 document.getElementById("logo").addEventListener("click", function() {
-    window.location.href = "tv.html";
+    window.location.href = "projetos/tv_aquario/tv.html";
 });
