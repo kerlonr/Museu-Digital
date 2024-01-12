@@ -5,10 +5,8 @@
 :root {
   --vermelho: #e50914;
   --preta: #141414;
-  --verde-clarinho: #71BE42;
-  --verde-claro: #629d3d;
-  --verde: #427D1E;
-  --verde-medio: #105100;
+  --primaria: #629d3d;
+  --secundaria: #427D1E;
   --verde-forte: #002f00;
   --cinza: #333;
   --branco: #f3f3f3;
@@ -61,14 +59,14 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  color: var(--verde);
+  color: var(--secundaria);
   
 }
 
 /* Estilos do HEADER */
 .header {
-  background-color: var(--verde);
-  color: var(--verde);
+  background-color: var(--secundaria);
+  color: var(--secundaria);
 }
 
 .logo {
@@ -76,7 +74,7 @@ body {
   padding: 10px;
   margin-right: 30px;
   text-decoration: none;
-  color: var(--verde);
+  color: var(--primaria);
   font-weight: bold;
 }
 
@@ -97,7 +95,7 @@ nav ul li:last-child {
 nav a {
   font-size: 20px;
   text-decoration: none;
-  color: var(--verde);
+  color: var(--primaria);
   margin: 0 20px 0 20px;
 }
 
@@ -111,7 +109,7 @@ nav a:hover {
   color: var(--branco);
   padding: 23px;
   border-radius: 8px;
-  background-color: var(--verde);
+  background-color: var(--primaria);
   max-width: 100%;
   position: relative;
   top: -50px;
@@ -130,7 +128,7 @@ nav a:hover {
 .container2 {
   margin: 0 15% 5% 15%;
   display: flex;
-  background-color: var(--verde-claro);
+  background-color: var(--primaria);
   border-radius: 4rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   flex-direction: row;
@@ -188,10 +186,19 @@ nav a:hover {
 }
 
 .bp {
-  background-color: var(--verde-clarinho);
+  background-color: var(--primaria);
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
+}
+
+.texto-bp {
+padding: 2rem;
+margin: 0px 20px;
+border-radius: 10px;
+color: var(--branco);
+font-size: 1.2rem;
+font-weight: lighter;
 }
 
 h4 {
@@ -241,7 +248,7 @@ h4 {
 }
 
 .texto-desempenho h3 {
-  color: var(--verde-claro);
+  color: var(--primaria);
   padding-bottom: 10px;
 }
 
@@ -256,7 +263,7 @@ h4 {
   font: bold 40px "Trebuchet MS", Arial, sans-serif;
   text-align: center;
   text-decoration: dotted;
-  color: var(--verde);
+  color: var(--primaria);
 }
 .conteudo-card {
   display: flex;
@@ -271,7 +278,7 @@ h4 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
   padding: 30px;
   text-align: center;
-  background-color: var(--verde);
+  background-color: var(--primaria);
 }
 
 .card img {
@@ -295,7 +302,7 @@ h4 {
 
 /* ---- Estilos dos DOWNLOADS ---- */
 .container-downloads {
-  background-color: var(--verde-claro);
+  background-color: var(--primaria);
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -333,7 +340,7 @@ h4 {
 }
 
 .subtitulo-downloads2 {
-  color: var(--verde);
+  color: var(--primaria);
 }
 
 .imagem {
@@ -450,7 +457,7 @@ h4 {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    color: var(--verde);
+    color: var(--primaria);
     flex-direction: column;
   }
 
@@ -483,9 +490,14 @@ h4 {
   }
 
   .imagem-sobre {
-    border-radius: 3rem;
+    border-radius: 4rem;
     max-width: 400px;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
+    margin: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+  .texto-bp {
+    font-size: 1rem;
   }
 
   .titulo {
@@ -529,7 +541,7 @@ h4 {
   .imagem-sobre {
     border-radius: 4rem;
     max-width: 400px;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     margin: 0;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
     
@@ -558,7 +570,7 @@ h4 {
   }
 
   .container-downloads, .container-downloads2{
-    background-color: var(--verde-claro);
+    background-color: var(--primaria);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -586,7 +598,7 @@ h4 {
     color: var(--branco);
   }
   .subtitulo-downloads2 {
-    color: var(--verde);
+    color: var(--primaria);
   }
 
   .imagem {
