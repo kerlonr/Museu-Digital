@@ -49,6 +49,7 @@ html::-moz-scrollbar-thumb:hover {
 
 /* Estilos Gerais */
 body {
+  overflow-x: hidden;
   background: var(--branco);
   font-family: "Montserrat", sans-serif;
   color: var(--branco);
@@ -525,9 +526,13 @@ h4 {
     flex-direction: column;
   }
 
-  .imagem-desempenho {
-    width: 70px;
-    height: 70px;
+  .imagem-sobre {
+    border-radius: 4rem;
+    max-width: 400px;
+    padding: 2rem;
+    margin: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    
   }
 
   .texto-desempenho h3 {
