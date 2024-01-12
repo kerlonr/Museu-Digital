@@ -437,3 +437,118 @@ h4 {
 .social-icon2:hover {
   color: var(--cor-instagram);
 }
+
+/* ---- Estilos para RESPONSIVIDADE MOBILE ----*/
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--verde);
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .slogan {
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .texto {
+    margin: 0 55px;
+    text-align: start;
+    font-size: 1rem;
+  }
+
+  .container1, .container2 {
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .imagem-sobre {
+    border-radius: 3rem;
+    max-width: 400px;
+    padding: 2rem;
+  }
+
+  .titulo {
+    margin: 5% 0 10% 10px;
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    font-size: 24px;
+  }
+
+  .conteudo {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .imagem-grande {
+    width: 100%;
+  }
+
+  .bp {
+    flex-direction: column-reverse;
+  }
+
+  .container-desempenho,
+  .conteudo-desempenho {
+    padding: 5% 5%;
+  }
+
+  .itens-desempenho {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+  .imagem-desempenho {
+    width: 70px;
+    height: 70px;
+  }
+
+  .texto-desempenho h3 {
+    text-align: center;
+}
+  .conteudo-card {
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .texto-downloads {
+    padding: 10px;
+    color: var(--branco);
+    font-weight: lighter;
+  }
+  .btn-download {
+    margin: 5% 0;
+  }
+
+  .footer-content {
+    padding: 20px;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+}
