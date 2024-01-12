@@ -440,6 +440,9 @@ h4 {
 
 /* ---- Estilos para RESPONSIVIDADE MOBILE ----*/
 @media screen and (max-width: 768px) {
+  .banner {
+    align-items: center;
+  }
   .container {
     display: flex;
     justify-content: center;
@@ -506,16 +509,21 @@ h4 {
     flex-direction: column-reverse;
   }
 
-  .container-desempenho,
   .conteudo-desempenho {
-    padding: 5% 5%;
+    display: grid;
+    background-color: var(--branco);
+    justify-content: start;
+    align-content: start;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 5%;
+    padding: 5% 15%;
   }
 
   .itens-desempenho {
     padding: 10px;
     display: flex;
     flex-direction: column;
-}
+  }
 
   .imagem-desempenho {
     width: 70px;
@@ -524,7 +532,7 @@ h4 {
 
   .texto-desempenho h3 {
     text-align: center;
-}
+  }
   .conteudo-card {
     flex-direction: column;
     align-items: center;
@@ -542,6 +550,58 @@ h4 {
   }
   .btn-download {
     margin: 5% 0;
+  }
+
+  .container-downloads, .container-downloads2{
+    background-color: var(--verde-claro);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    padding: 20px;
+  }
+  .container-downloads2 {
+    background-color: var(--preta);
+  }
+
+  .texto-downloads {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    color: var(--branco);
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+
+  .subtitulo-downloads1, .subtitulo-downloads2 {
+    margin: 10px;
+    font: bold 3rem "Trebuchet MS", Arial, sans-serif;
+    text-align: center;
+    text-decoration: dotted;
+    color: var(--branco);
+  }
+  .subtitulo-downloads2 {
+    color: var(--verde);
+  }
+
+  .imagem {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem;
+  }
+
+  .btn-download {
+    background-color: var(--branco);
+    border-radius: 2rem;
+    width: 80%;
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    border-style: solid;
+    transition: 0.5s ease-in-out;
   }
 
   .footer-content {
