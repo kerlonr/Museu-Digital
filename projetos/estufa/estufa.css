@@ -67,6 +67,12 @@ body {
 .header {
   background-color: var(--secundaria);
   color: var(--secundaria);
+  position: sticky;
+  transition: top 0.3s ease-in-out;
+}
+
+.invisivel {
+  top: -100px;
 }
 
 .logo {
@@ -238,7 +244,6 @@ h4 {
 
 .imagem-desempenho:hover {
   transform: scale(1.1);
-  transition: 0.1s ease-in-out;
 }
 
 .texto-desempenho {
@@ -300,6 +305,50 @@ h4 {
   text-align: center;
 }
 
+/* ---- Estilos do CODIGO ---- */
+#codigo {
+  display: flex;
+  justify-content: center;
+  background-color: var(--preta);
+  align-items: center;
+}
+
+.titulo-codigo {
+  font: 60px "Trebuchet MS", Arial, sans-serif;
+  font-weight: bolder;
+  color: var(--secundaria);
+  margin-right: 2rem;
+}
+
+.codigo {
+  display: flex;
+  background-color: var(--preta);
+  width: 50%;
+  height: 500px;
+  overflow: auto;
+  padding: 1rem 3rem;
+  margin: 2rem;
+  border: solid;
+  border-radius: 10px;
+  border-color: var(--primaria);
+}
+
+.codigo::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--verde-forte);
+  border-radius: 2rem;
+}
+
+.codigo::-webkit-scrollbar-thumb {
+  background-color: var(--cinza);
+  border-radius: 2rem;
+}
+
+.codigo::-webkit-scrollbar-track {
+  background-color: var(--preta);
+  border-radius: 2rem;
+}
+
 /* ---- Estilos dos DOWNLOADS ---- */
 .container-downloads {
   background-color: var(--primaria);
@@ -340,7 +389,7 @@ h4 {
 }
 
 .subtitulo-downloads2 {
-  color: var(--primaria);
+  color: var(--secundaria);
 }
 
 .imagem {
@@ -560,6 +609,15 @@ h4 {
   .card {
     width: 80%;
     margin-bottom: 20px;
+  }
+  #codigo {
+    flex-direction: column;
+  }
+  .titulo-codigo {
+    margin: 2rem 0px 0px 0px;
+  }
+  .codigo{
+    width: 90%;
   }
   .texto-downloads {
     padding: 10px;
