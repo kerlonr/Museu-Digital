@@ -1,0 +1,701 @@
+/* Importação de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* Variáveis */
+:root {
+  --vermelho: #e50914;
+  --preta: #141414;
+  --primaria: #629d3d;
+  --secundaria: #427D1E;
+  --verde-forte: #002f00;
+  --cinza: #333;
+  --branco: #f3f3f3;
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb: rgba(0, 0, 0, 0.3);
+  --scrollbar-hover: rgba(0, 0, 0, 0.5);
+  --cor-facebook: #3b5998;
+  --cor-twitter: #66bfda;
+  --cor-instagram: #dd2a7b;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para a scrollbar */
+/* Para navegadores Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb,
+html::-moz-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover,
+html::-moz-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+}
+
+/* Estilos Gerais */
+body {
+  overflow-x: hidden;
+  background: var(--branco);
+  font-family: "Montserrat", sans-serif;
+  color: var(--branco);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--secundaria);
+  
+}
+
+/* Estilos do HEADER */
+.header {
+  background-color: var(--secundaria);
+  color: var(--secundaria);
+  position: sticky;
+  transition: top 0.3s ease-in-out;
+}
+
+.invisivel {
+  top: -100px;
+}
+
+.logo {
+  font-size: 40px;
+  padding: 10px;
+  margin-right: 30px;
+  text-decoration: none;
+  color: var(--primaria);
+  font-weight: bold;
+}
+
+/* Estilos da NAVBAR */
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primaria);
+  margin: 0 20px 0 20px;
+}
+
+nav a:hover {
+  color: var(--verde-forte);
+}
+
+/* Estilos do CONTEÚDO */
+.slogan {
+  font-size: 24px;
+  color: var(--branco);
+  padding: 23px;
+  border-radius: 8px;
+  background-color: var(--primaria);
+  max-width: 100%;
+  position: relative;
+  top: -50px;
+}
+
+.texto {
+  padding: 10px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.container1,
+.container2 {
+  margin: 0 15% 5% 15%;
+  display: flex;
+  background-color: var(--primaria);
+  border-radius: 4rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+  align-items: center;
+}
+
+.container1 {
+  flex-direction: row-reverse;
+}
+
+.imagem-sobre {
+  border-radius: 3rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  max-width: 400px;
+}
+
+/* Estilos para o BANNER */
+.banner {
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../estufa/imagens/fundo-estufa.jpg");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.titulo {
+  margin: 10% 0 20% 20px;
+  font: 60px "Trebuchet MS", Arial, sans-serif;
+  font-weight: bolder;
+}
+
+.subtitulo {
+  margin: 20px;
+  font: bold 40px "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  text-decoration: dotted;
+  color: var(--branco);
+}
+
+.conteudo {
+  text-align: left;
+  margin-right: 10px;
+}
+
+/* ---- Estilos IMAGEM GRANDE ----*/
+.imagem-grande {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.bp {
+  background-color: var(--primaria);
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.texto-bp {
+padding: 2rem;
+margin: 0px 20px;
+border-radius: 10px;
+color: var(--branco);
+font-size: 1.2rem;
+font-weight: lighter;
+}
+
+h4 {
+  display: flex;
+}
+
+/* ---- Estilos dos DESEMPENHOS ---- */
+.container-desempenho {
+  background-color: var(--branco);
+  display: grid;
+}
+
+.conteudo-desempenho {
+  display: grid;
+  background-color: var(--branco);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: start;
+  align-content: start;
+  grid-auto-flow: row;
+  gap: 1rem;
+  padding: 5% 15%;
+}
+
+.itens-desempenho {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.imagem-desempenho {
+  width: 100px;
+  height: 100px;
+  transition: 0.5s ease-in-out;
+}
+
+.imagem-desempenho:hover {
+  transform: scale(1.1);
+}
+
+.texto-desempenho {
+  color: var(--preta);
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-desempenho h3 {
+  color: var(--primaria);
+  padding-bottom: 10px;
+}
+
+.texto-desempenho p {
+  font-size: 15px;
+  color: var(--pretas);
+}
+
+/* ---- Estilos do CARD EQUIPE ---- */
+.subtitulo-equipe {
+  margin: 20px;
+  font: bold 40px "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  text-decoration: dotted;
+  color: var(--primaria);
+}
+.conteudo-card {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2% 5% 5% 5%;
+}
+
+.card {
+  display: block;
+  width: 25%;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  padding: 30px;
+  text-align: center;
+  background-color: var(--primaria);
+}
+
+.card img {
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 5px;
+  font-size: 2.3rem;
+}
+
+.card p {
+  font-size: 1rem;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  color: var(--branco);
+  text-align: center;
+}
+
+/* ---- Estilos do CODIGO ---- */
+#codigo {
+  display: flex;
+  justify-content: center;
+  background-color: var(--preta);
+  align-items: center;
+}
+
+.titulo-codigo {
+  font: 60px "Trebuchet MS", Arial, sans-serif;
+  font-weight: bolder;
+  color: var(--secundaria);
+  margin-right: 2rem;
+}
+
+.codigo {
+  display: flex;
+  background-color: var(--preta);
+  width: 50%;
+  height: 500px;
+  overflow: auto;
+  padding: 1rem 3rem;
+  margin: 2rem;
+  border: solid;
+  border-radius: 10px;
+  border-color: var(--primaria);
+}
+
+.codigo::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--verde-forte);
+  border-radius: 2rem;
+}
+
+.codigo::-webkit-scrollbar-thumb {
+  background-color: var(--cinza);
+  border-radius: 2rem;
+}
+
+.codigo::-webkit-scrollbar-track {
+  background-color: var(--preta);
+  border-radius: 2rem;
+}
+
+/* ---- Estilos dos DOWNLOADS ---- */
+.container-downloads {
+  background-color: var(--primaria);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.container-downloads2 {
+  background-color: var(--preta);
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.conteudo-download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-downloads {
+  padding: 10px;
+  margin: 0px 225px;
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.subtitulo-downloads1, .subtitulo-downloads2 {
+  margin: 20px;
+  font: bold 40px "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  text-decoration: dotted;
+  color: var(--branco);
+}
+
+.subtitulo-downloads2 {
+  color: var(--secundaria);
+}
+
+.imagem {
+  width: 30vw;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-download {
+  background-color: var(--branco);
+  border-radius: 2rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 1%;
+  border-style: solid;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-download:hover {
+  background-color: var(--branco);
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.material-symbols-outlined {
+  color: var(--preta);
+}
+
+.btn-download a {
+  text-decoration: none;
+  color: var(--preta);
+}
+
+/* ---- Estilos do FOOTER ---- */
+.footer {
+  background-color: var(--cinza);
+  color: var(--branco);
+  padding: 40px 0;
+}
+
+.container-footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (orientation: landscape) {
+  .footer-content {
+    justify-content: space-between;
+  }
+}
+
+.footer-logo img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.footer-info {
+  margin-top: 20px;
+}
+
+.footer-info p {
+  margin-bottom: 8px;
+}
+
+/* ---- Estilos dos ICONS ---- */
+.footer-social,
+[class*="social-icon"],
+.social-icon2 {
+  color: var(--branco);
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+[class*="social-icon"] {
+  margin-right: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icon:hover {
+  color: var(--cor-facebook);
+}
+
+.social-icon1:hover {
+  color: var(--cor-twitter);
+}
+
+.social-icon2:hover {
+  color: var(--cor-instagram);
+}
+
+/* ---- Estilos para RESPONSIVIDADE MOBILE ----*/
+@media screen and (max-width: 768px) {
+
+  /*--- HEADER ---*/
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .logo {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  /*--- BANNER ---*/
+  .banner {
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--primaria);
+    flex-direction: column;
+  }
+
+  .slogan {
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /*--- CONTEUDO ---*/
+  .container1, .container2 {
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .texto {
+    margin: 0 55px;
+    text-align: start;
+    font-size: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .imagem-sobre {
+    border-radius: 4rem;
+    max-width: 400px;
+    padding: 1.5rem 2rem;
+    margin: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  /*--- IMAGEM GRANDE ---*/
+  .bp {
+    flex-direction: column-reverse;
+  }
+
+  .texto-bp {
+    font-size: 1rem;
+  }
+
+  .imagem-grande {
+    width: 100%;
+  }
+
+  .titulo {
+    margin: 5% 0 10% 10px;
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    font-size: 24px;
+  }
+
+  .conteudo {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+/*--- DESEMPENHO ---*/
+  .conteudo-desempenho {
+    display: grid;
+    background-color: var(--branco);
+    justify-content: start;
+    align-content: start;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 5%;
+    padding: 5% 15%;
+  }
+
+  .itens-desempenho {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .texto-desempenho h3 {
+    text-align: center;
+  }
+
+  /*--- EQUIPE ---*/
+  .conteudo-card {
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  /*--- CODIGO ---*/
+  #codigo {
+    flex-direction: column;
+  }
+
+  .titulo-codigo {
+    margin: 2rem 0px 0px 0px;
+  }
+
+  .codigo{
+    width: 90%;
+  }
+
+  /*--- DOWNLOADS ---*/
+  .texto-downloads {
+    padding: 10px;
+    color: var(--branco);
+    font-weight: lighter;
+  }
+
+  .btn-download {
+    margin: 5% 0;
+  }
+
+  .container-downloads, .container-downloads2{
+    background-color: var(--primaria);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+  }
+  .conteudo-download {
+    padding-bottom: 2rem;
+  }
+  .container-downloads2 {
+    background-color: var(--preta);
+  }
+
+  .texto-downloads {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    color: var(--branco);
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+
+  .subtitulo-downloads1, .subtitulo-downloads2 {
+    margin: 10px;
+    font: bold 3rem "Trebuchet MS", Arial, sans-serif;
+    text-align: center;
+    text-decoration: dotted;
+    color: var(--branco);
+  }
+
+  .subtitulo-downloads2 {
+    color: var(--primaria);
+  }
+
+  .imagem {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn-download {
+    background-color: var(--branco);
+    border-radius: 2rem;
+    width: 80%;
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    border-style: solid;
+    transition: 0.5s ease-in-out;
+  }
+
+  /*--- FOOTER ---*/
+  .footer-content {
+    padding: 20px;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+}
