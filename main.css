@@ -80,6 +80,10 @@ body {
 }
 
 /* ---- Estilos NAVBAR ---- */
+nav {
+    display: flex;
+}
+
 nav ul {
   list-style-type: none;
 }
